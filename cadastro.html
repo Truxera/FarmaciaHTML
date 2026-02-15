@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Medicamentos da Farmácia São Saúde</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🏥 Farmácia São Saúde</h1>
+            <ul>
+                <li><a href="Farmácia.html">Início</a></li>
+                <li><a href="precos.html">Tabela de Preços</a></li>
+                <li><a href="cadastro.html">Cadastro de Medicamentos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Cadastro de Medicamentos</h2>
+
+        <div class="form-container">
+            <div class="info-box">
+                ℹ️ Preencha todos os campos para registrar um novo medicamento no sistema da farmácia.
+            </div>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nomeMedicamento">Nome do Medicamento *</label>
+                    <input type="text" id="nomeMedicamento" name="nomeMedicamento" required placeholder="Ex: Dipirona 500mg">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nomeFabricante">Nome da Fabricante *</label>
+                        <input type="text" id="nomeFabricante" name="nomeFabricante" required placeholder="Ex: Laboratório Pharma">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dataValidade">Data de Validade *</label>
+                        <input type="date" id="dataValidade" name="dataValidade" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="formaUso">Forma de Uso *</label>
+                    <textarea id="formaUso" name="formaUso" required placeholder="Ex: 1 comprimido a cada 6 horas com água. Ingerir com alimentos."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="quantidade">Quantidade Disponível (em unidades) *</label>
+                        <input type="number" id="quantidade" name="quantidade" required placeholder="0" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formaArmazenamento">Forma de Armazenamento *</label>
+                        <select id="formaArmazenamento" name="formaArmazenamento" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="temperatura-ambiente">Temperatura Ambiente</option>
+                            <option value="refrigerado">Refrigerado (2-8°C)</option>
+                            <option value="congelado">Congelado (-20°C ou menos)</option>
+                            <option value="protegido-luz">Protegido da Luz</option>
+                            <option value="ambiente-seco">Ambiente Seco</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>É um Remédio Controlado? *</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="controlado" value="sim" required> Sim
+                        </label>
+                        <label>
+                            <input type="radio" name="controlado" value="nao" required> Não
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit">Cadastrar Medicamento</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Farmácia São Saúde. Todos os direitos reservados. | Endereço: Rua da Saúde, 123 - SP</p>
+    </footer>
+</body>
+</html>
